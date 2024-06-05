@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    color: #ffffff;
+    background-color: #191919;
+    --type-first: 'Futura Md BT';
+    font-family: var(--type-first);
+}
+
+h1, h2, p, span {
+    margin: 0;
+}
+
+button {
+    font-family: var(--type-first);
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 200;
+}
+
+p {
+    font-size: 32px;
+    font-weight: 200;
+}
+
+a {
+    text-decoration: none;
+}
