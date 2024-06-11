@@ -1,8 +1,5 @@
 .mainImage {
-    width: 100%;
-    height: auto;
-    z-index: -1;
-    position: relative;
+    margin-left: -50vw;
 }
 
 .container {
@@ -15,24 +12,40 @@
 }
 
 .intro {
-    margin-top: 162px;
-    margin-left: 122px;
-    margin-top: 162px;
-    width: 150%;
-    position: absolute;
+    padding-left: 122px;
+    padding-top: 162px;
+    width: 588px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1100px) {
     .container {
-      flex-direction: column; /* Inverte a ordem dos itens na versão responsiva */
+      flex-direction: column;
     }
 
     .intro {
         position: relative;
+        max-width: 1100px;
+        padding-left: 0;
+        text-align: left;
+        padding-left: 24px;
+        width: auto;
+        min-width: calc(100% - 24px);
+        padding-top: 98px;
+        height: auto;
     }
     .mainImage {
         width: 100%;
         height: 100%;
+        margin-top: -50px;
+        margin-left: 0;
+    }
+
+    .secondBlock {
+        margin-left: 24px;
+    }
+
+    .thirdBlock {
+        margin-left: 24px;
     }
 }
 
@@ -47,16 +60,29 @@
 .secondBlock {
     margin-top: 162px;
     margin-left: 122px;
+    margin-right: 122px;
     margin-bottom: 200px;
 }
 
 .aboutUs {
-    display: flex;
-    justify-content: space-between;
+}
+
+.aboutUsTitle {
+    min-width: 270px;
+}
+
+.divImgAboutUs {
+    max-width: 800px;
+
 }
 
 .aboutUsImg {
-    margin-top: -105px;
+    margin-top: -160px;
+    margin-left: 100px;
+    position: absolute;
+    right: 0;
+    width: auto;
+    z-index: -1;
 }
 
 .secondBlockP {
@@ -66,11 +92,27 @@
 
 .thirdBlock {
     margin-left: 122px;
+    margin-right: 122px;
+    margin-bottom: 200px;
 }
 
-.btn {
+.btnAboutUs {
     height: 64px;
     width: 404px;
+}
+
+.divBtnOurProject {
+    width: 80%  ;
+    height: 64px;
+    padding-top: 100px;
+    align-self: center;
+}
+
+
+.btn {
+    width: 100%;
+    height: 100%;
+    position: relative;
     border-radius: 16px;
     background-color: #1E1E1E;
     color: #ffffff;
@@ -87,18 +129,30 @@
         #FF206E, #41EAd4
     );
     position: absolute;
-    top: 1370px;
-    left: 122px;
+    margin-top: -20px;
+    left: 0;
     background-size: 100%;
     z-index: -1;
-    width: 408px;
-    height: 70px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
     filter: blur(8px);
     transition: opacity .3s ease-in-out;
     border-radius: 10px;
     opacity: 0;
 }
 
-.btn:hover::before {
+.btn:hover::before, .btnOurProject:hover::before {
     opacity: 1;
+}
+
+.divVideoPlayer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;    
+}
+
+.videoPlayer{
+    width: 80%;
+    align-self: center;
 }
