@@ -1,52 +1,27 @@
+.homeContainer {
+    height: auto;
+    display: block;
+}
 .mainImage {
-    margin-left: -50vw;
+    margin-left: 15vw;
+    width: 84.8%
 }
 
 .container {
     display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .introDiv {
     flex: 1;
-    position: relative;
+    position: absolute;
 }
 
 .intro {
     padding-left: 122px;
     padding-top: 162px;
     width: 588px;
-}
-
-@media only screen and (max-width: 1100px) {
-    .container {
-      flex-direction: column;
-    }
-
-    .intro {
-        position: relative;
-        max-width: 1100px;
-        padding-left: 0;
-        text-align: left;
-        padding-left: 24px;
-        width: auto;
-        min-width: calc(100% - 24px);
-        padding-top: 98px;
-        height: auto;
-    }
-    .mainImage {
-        width: 100%;
-        height: 100%;
-        margin-top: -50px;
-        margin-left: 0;
-    }
-
-    .secondBlock {
-        margin-left: 24px;
-    }
-
-    .thirdBlock {
-        margin-left: 24px;
-    }
 }
 
 .specialWorldRed {
@@ -61,10 +36,6 @@
     margin-top: 162px;
     margin-left: 122px;
     margin-right: 122px;
-    margin-bottom: 200px;
-}
-
-.aboutUs {
 }
 
 .aboutUsTitle {
@@ -91,9 +62,17 @@
 }
 
 .thirdBlock {
+    margin-top: 100px;
     margin-left: 122px;
     margin-right: 122px;
-    margin-bottom: 200px;
+    margin-bottom: 48px;
+}
+
+.forthBlock {
+    margin-top: 200px;
+    margin-left: 122px;
+    margin-right: 122px;
+    margin-bottom: 48px;
 }
 
 .btnAboutUs {
@@ -119,7 +98,6 @@
     font-weight: bold;
     border: 1px solid #666666;
     cursor: pointer;
-    font-size: 24px;
 }
 
 .btn::before {
@@ -155,4 +133,200 @@
 .videoPlayer{
     width: 80%;
     align-self: center;
+}
+
+.contact {
+    margin-top: 200px;
+    height: 132px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: radial-gradient(circle, #666666 10%, transparent 10%);
+    background-size: 20px 20px;
+}
+
+.contactContent {
+    margin-left: 122px;
+}
+
+.contatButton {
+    height: 64px;
+    width: 310px;
+    margin-right: 122px;
+}
+
+.socialMedia {
+    margin-top: 100px;
+    margin-bottom: 136px;
+    height: 128px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    background-image: url('../assets/led.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.socialMediaFirstItem {
+    border-radius: 16px 0px 0px 16px;
+}
+
+.socialMediaLastItem {
+    border-radius: 0px 16px 16px 0px;
+}
+
+.socialMediaItem,  .socialMediaFirstItem, .socialMediaLastItem {
+    height: 128px;
+    outline: 1px solid #666666;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1E1E1E;
+    width: 220px;
+    padding-left: 20px;
+}
+
+.socialMediaIcons {
+    height: 32px;
+    width: 32px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 913px) {
+    .container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .introDiv {
+        width: 60%;
+        margin-bottom: -64px;
+        position: relative;
+    }
+
+    .intro {
+        position: relative;
+        max-width: 1100px;
+        padding-left: 0;
+        text-align: left;
+        padding-left: 24px;
+        width: auto;
+        min-width: calc(100% - 24px);
+        padding-top: 98px;
+        height: auto;
+    }
+    .mainImage {
+        width: 100%;
+        height: 100%;
+        margin-top: -50px;
+        margin-left: 0;
+    }
+
+    .secondBlock, .thirdBlock, .forthBlock {
+        margin-left: 24px;
+        margin-right: 24px;
+        margin-top: 70px;
+    }
+
+    .aboutUsImg {
+        margin-top: -140px;
+        margin-left: 100px;
+    }
+
+    .contact {
+        margin-top: 50px;
+        height: 258px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .contactContent {
+        margin-left: 0px;
+        margin-bottom: 38px;
+        width: 326px;
+        text-align: center;
+        margin-top: 38px;
+    }
+    
+    .contatButton {
+        margin-left: 50%;
+        margin-right: 50%;
+        width: 326px;
+        height: 64px;
+        margin-bottom: 38px;
+    }
+
+    .socialMedia {
+        flex-direction: column;
+        margin-top: 200px;
+        height: 500px;
+        width: 100%;
+        display: flex;
+        gap: 0px;
+        background-image: none;
+    }
+
+    .socialMediaFirstItem {
+        border-radius: 16px 16px 0px 0px;
+    }
+    
+    .socialMediaLastItem {
+        border-radius: 0px 0px 16px 16px;
+    }
+    
+    .socialMediaItem,  .socialMediaFirstItem, .socialMediaLastItem {
+        height: 128px;
+        outline: 1px solid #666666;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #1E1E1E;
+        width: 60%;
+        padding: 20px 20px 20px 20px;
+    }
+    
+    .socialMediaIcons {
+        height: 32px;
+        width: 32px;
+        margin-bottom: 20px;
+    }
+
+    .btnAboutUs {
+        height: 64px;
+        width: 291px;
+    }
+
+    .btn::before {
+        opacity: 1;
+    }
+
+    .divBtnOurProject {
+      padding-top: 46px;  
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+      }
+  
+    .introDiv {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .aboutUsImg {
+        margin-top: -120px;
+        margin-left: 100px;
+        width: 30%;
+        height: 20%;
+    }
 }

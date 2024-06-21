@@ -1,0 +1,60 @@
+.carouselDiv {
+    max-height: 607px;
+    margin-right: 100px;
+    width: 100%;
+}
+
+.carouselImg {
+    height: 607px;
+    width: 95%;
+    object-fit: contain;
+    transition: .3s ease-in-out;
+}
+
+.custom-arrow-prev {
+    left: 122px;
+    z-index: 1;
+}
+  
+.custom-arrow-next {
+    right: 122px;
+    z-index: 1;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 275px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 913px) {
+    .custom-arrow-prev {
+        left: 24px;
+        z-index: 1;
+        height: 48px;
+    }
+      
+    .custom-arrow-next {
+        right: 24px;
+        z-index: 1;
+        height: 48px;
+    }
+
+    .custom-arrow {
+        top: 170px;
+    }
+
+    .carouselImg {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .carouselImg {
+        height: 200px;
+    }
+
+    .custom-arrow {
+        top: 75px;
+    }
+}
