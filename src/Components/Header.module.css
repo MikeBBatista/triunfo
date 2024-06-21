@@ -1,9 +1,17 @@
 .active {
-    transition: 0.3s linear;
+    opacity: 1;
+    top: 0px;
+    position: fixed;
+    transition: top 1s;
+    z-index: 2;
+    -webkit-transition: top 1s;
 }
 
 .hidden {
     opacity: 0;
+    top: -50px;
+    transition: all 1s;
+    -webkit-transition: all 1s;
 }
 
 nav {
@@ -34,6 +42,95 @@ nav {
 .navDiv {
     height: 42px;
     align-content: center;
+}
+
+.navMobile {
+    display: block;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    height: 164px;
+    width: 100%;
+    left: 0px;
+    padding: 0 1rem;
+    background-color: #1E1E1E;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    transform: translateX(-10px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navMobileActive {
+    transition: .3s;
+    transform: initial;
+    pointer-events: initial;
+    opacity: 1;
+}
+
+.navMobile a {
+    display: flex;
+    margin-left: 24px;
+    margin-right: 48px;
+    align-items: center;
+    border-bottom: 1px solid #ffffff;
+    margin-top: 8px;
+    padding: .5rem 0;
+}
+
+.mobileBtn {
+    height: 40px;
+    width: 40px;
+    background-color: #1E1E1E;
+    color: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #666666;
+    cursor: pointer;
+}
+
+.mobileBtn::after {
+    content: '';
+    display: block;
+    width: 1.2rem;
+    height: 2px;
+    margin-left: 3px;
+    background: currentColor;
+    border-radius: 2px;
+    box-shadow: 0 6px currentColor, 0 -6px currentColor;
+    transition: .2s;
+}
+
+.mobileBtn::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FF206E, #41EAd4
+    );
+    position: absolute;
+    top: 14px;
+    right: 38px;
+    background-size: 100%;
+    z-index: -1;
+    width: 42px;
+    height: 44px;
+    filter: blur(8px);
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.mobileBtn:focus::before,
+.mobileBtn:hover::before,
+.mobileBtnActive {
+    opacity: 1;
+}
+
+.mobileBtnActive::after {
+    transform: rotate(-90deg);
+    width: 4px;
+    height: 4px;
+    margin-left: 10px;
+    box-shadow: 0 8px currentColor, 0 -8px currentColor;
 }
 
 .btn {
@@ -69,4 +166,10 @@ nav {
 
 .btn:hover::before {
     opacity: 1;
+}
+
+@media only screen and (max-width: 913px) {
+    .logo {
+        height: 32px;
+    }
 }

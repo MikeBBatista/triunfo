@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 import logo from '../assets/logo.svg'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import useMedia from '../Hooks/useMedia';
 
 const Header = () => {
   const [show, setShow] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const mobile = useMedia('(max-width: 913px)');
+  console.log(mobile);
+  
+  const [mobileMenu, setMobileMenu] = React.useState(false);
+  const {pathname} = useLocation();
+  React.useEffect(() => {
+    setMobileMenu(false);
+  }, [pathname])
 
   const controlNavbar = () => {
-    
-    if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
-      setShow(true); 
-      console.log('teste');
-    } else { // if scroll up show the navbar
+    if (window.scrollY > lastScrollY) {
+      setShow(true);
+    } else {
       setShow(false);  
     }
-
-    // remember current page location to use in the next move
     setLastScrollY(window.scrollY); 
   };
-
   useEffect(() => {
     window.addEventListener('scroll', controlNavbar);
 
@@ -29,17 +33,30 @@ const Header = () => {
     };
   }, [lastScrollY]);
   return (
-    <div className={`active ${show && styles.hidden}`}>
+    <div className={`${styles.active} ${show && styles.hidden}`}>
         <nav>
             <div className={styles.navDiv}>
                 <Link to="/" aria-label='Triunfo - Home'>
                 <img className={styles.logo} src={logo} alt="" />
                 </Link>
             </div>
-            <div className={styles.navDiv}>
-            <Link to="/" className={styles.links}>INÍCIO</Link>
-            <Link to="/aboutUs" className={styles.links}>SOBRE NÓS</Link>
-            <Link to="/contact"><button className={styles.btn}>ENTRE EM CONTATO</button></Link>
+            {mobile && (
+              <button 
+                aria-label='Menu'
+                className={`${styles.mobileBtn} ${mobileMenu && styles.mobileBtnActive}`} 
+                onClick={() => setMobileMenu(!mobileMenu)}
+                > 
+                </button>
+            )}
+            <div className={`${mobile ? styles.navMobile : styles.navDiv} ${mobileMenu && styles.navMobileActive}`}>
+              <Link to="/" className={styles.links}>INÍCIO</Link>
+              
+              {mobile && (
+                <Link to="mailto:mikebbatista@hotmail.com?subject=teste" className={styles.links}>ENTRE EM CONTATO</Link>
+              )}
+              {!mobile && (
+              <Link to="mailto:mikebbatista@hotmail.com?subject=teste"><button className={styles.btn}>ENTRE EM CONTATO</button></Link>
+              )}
             </div>
         </nav>
     </div>

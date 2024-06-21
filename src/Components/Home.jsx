@@ -4,10 +4,16 @@ import main_image from '../assets/first_image.png'
 import led from '../assets/led.png'
 import { Link } from 'react-router-dom';
 import YoutubePlayer from "./YoutubePlayer";
+import Carousel from './Carousel'
+import youtubeIcon from '../assets/youtube-icon.svg'
+import discIcon from '../assets/discord-icon.svg'
+import instaIcon from '../assets/insta-icon.svg'
+import linkedinIcon from '../assets/linkedin-icon.svg'
+import twitterIcon from '../assets/x.png'
 
 const Home = () => {
   return (
-    <div>
+    <div className={styles.homeContainer}>
       <div className={styles.container}>
         <div className={styles.introDiv}>
           <h1 className={styles.intro}>
@@ -39,19 +45,64 @@ const Home = () => {
       </div>
       <div className={styles.thirdBlock}>
         <h2>NOSSO PROJETO</h2>
-        <p className={styles.secondBlockP}>Em nosso primeiro projeto, <span className={styles.specialWorldRed}>SI</span><span className={styles.specialWorldBlue}>NA</span>, embarcamos em uma aventura épica ambientada em um universo [Gênero do Jogo] onde a arte é a força vital que molda o mundo. Os jogadores assumem o papel de [Protagonista], um [Descrição do Protagonista] que deve usar seus talentos artísticos para [Objetivo do Jogador].</p>
+        <p className={styles.secondBlockP}>Em nosso primeiro projeto,SINA, embarcamos em uma aventura épica ambientada em um universo abandonado pelos deuses. Os jogadores assumem o papel de Neeve, um jovem que carrega a responsabilidade de cuidar de sua mãe doente enquanto busca por uma cura.</p>
         <div className={styles.divVideoPlayer}>
           <div className={styles.videoPlayer}>
             <YoutubePlayer embedId="mdwX3ac1sfo" />
-          </div>
+          </div>          
           <div className={styles.divBtnOurProject}>
+          <Link to="https://store.steampowered.com/app/2822310/Sina/" target="_blank">
             <button className={styles.btn}>BAIXE O DEMO NA STEAM</button>
+          </Link>
           </div>
         </div>
       </div>
-      <div className={styles.thirdBlock}>
-      <div className={styles.aboutUsTitle}>
+      <div className={styles.forthBlock}>
+        <div className={styles.aboutUsTitle}>
           <h2>SLIDE SHOW</h2>
+          </div>
+      </div>
+      <Carousel />
+      <div className={styles.contact}>
+        <div className={styles.contactContent}>
+          <h2>VAMOS CONVERSAR?</h2>
+        </div>
+        <div className={styles.contatButton}>  
+          <Link to="mailto:mikebbatista@hotmail.com?subject=teste" >
+            <button className={styles.btn}>ENTRE EM CONTATO</button>
+          </Link>
+        </div>
+      </div>
+      <div className={styles.socialMedia}>
+        <div className={styles.socialMediaFirstItem}>
+          <Link to='https://www.youtube.com/@familiadev/featured' target="_blank">
+            <img className={styles.socialMediaIcons} src={youtubeIcon} />
+            <p>Youtube</p>
+          </Link>
+        </div>
+          <div className={styles.socialMediaItem}>
+            <Link to='https://discord.gg/r9SaNZGBrX' target="_blank">
+              <img className={styles.socialMediaIcons} src={discIcon} />
+              <p>Discord</p>
+            </Link>
+          </div>
+          <div className={styles.socialMediaItem}>
+            <Link to='https://www.instagram.com/triunfogamestudios' target="_blank">
+              <img className={styles.socialMediaIcons} src={instaIcon} />
+              <p>Instagram</p>
+            </Link>
+          </div>
+          <div className={styles.socialMediaItem}>
+            <Link to='https://twitter.com/triunfostudios' target="_blank">
+              <img className={styles.socialMediaIcons} src={twitterIcon} />
+              <p>X</p>
+            </Link>
+          </div>
+          <div className={styles.socialMediaLastItem}>
+            <Link to='https://www.linkedin.com/company/triunfogamestudios/?viewAsMember=true' target="_blank">
+              <img className={styles.socialMediaIcons} src={linkedinIcon} />
+              <p>Linkedin</p>
+            </Link>
           </div>
       </div>
     </div>
