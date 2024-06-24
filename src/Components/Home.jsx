@@ -37,15 +37,19 @@ const Home = () => {
           Nossa missão é desenvolver jogos que coloquem a arte no centro da experiência, combinando visuais deslumbrantes, 
           narrativas envolventes e jogabilidade inovadora.
         </p>
-        <Link to="/aboutUs">
+        <p className={styles.secondBlockP}>
+        Temos um canal no youtube chamado Familia dev onde postamos devlog videos sobre todo nosso processo de abertura, 
+        crescimento da empresa e desenvolvimento do SINA.
+        </p>
+        <Link to="https://www.youtube.com/@familiadev/featured" target="_blank">
         <div className={styles.btnAboutUs}>
-          <button className={styles.btn}>CONHEÇA NOSSA HISTÓRIA</button>
+          <button className={styles.btn}>CONHEÇA NOSSO CANAL</button>
         </div>
         </Link>
       </div>
       <div className={styles.thirdBlock}>
         <h2>NOSSO PROJETO</h2>
-        <p className={styles.secondBlockP}>Em nosso primeiro projeto,SINA, embarcamos em uma aventura épica ambientada em um universo abandonado pelos deuses. Os jogadores assumem o papel de Neeve, um jovem que carrega a responsabilidade de cuidar de sua mãe doente enquanto busca por uma cura.</p>
+        <p className={styles.secondBlockP}>Em nosso primeiro projeto, SINA, embarcamos em uma aventura épica ambientada em um universo abandonado pelos deuses. Os jogadores assumem o papel de Neeve, um jovem que carrega a responsabilidade de cuidar de sua mãe doente enquanto busca por uma cura.</p>
         <div className={styles.divVideoPlayer}>
           <div className={styles.videoPlayer}>
             <YoutubePlayer embedId="mdwX3ac1sfo" />
@@ -68,7 +72,7 @@ const Home = () => {
           <h2>VAMOS CONVERSAR?</h2>
         </div>
         <div className={styles.contatButton}>  
-          <Link to="mailto:mikebbatista@hotmail.com?subject=teste" >
+          <Link to="mailto:contato@triunfogamestudios.com?subject=Contact to Triunfo Games" >
             <button className={styles.btn}>ENTRE EM CONTATO</button>
           </Link>
         </div>

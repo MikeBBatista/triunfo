@@ -8,13 +8,17 @@ const Header = () => {
   const [show, setShow] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const mobile = useMedia('(max-width: 913px)');
-  console.log(mobile);
   
   const [mobileMenu, setMobileMenu] = React.useState(false);
   const {pathname} = useLocation();
   React.useEffect(() => {
     setMobileMenu(false);
   }, [pathname])
+
+  const toHome = () => {
+    window.scrollTo(0, 0);
+  }
+
 
   const controlNavbar = () => {
     if (window.scrollY > lastScrollY) {
@@ -36,7 +40,7 @@ const Header = () => {
     <div className={`${styles.active} ${show && styles.hidden}`}>
         <nav>
             <div className={styles.navDiv}>
-                <Link to="/" aria-label='Triunfo - Home'>
+                <Link to="/triunfo" aria-label='Triunfo - Home' onClick={toHome}>
                 <img className={styles.logo} src={logo} alt="" />
                 </Link>
             </div>
@@ -49,13 +53,13 @@ const Header = () => {
                 </button>
             )}
             <div className={`${mobile ? styles.navMobile : styles.navDiv} ${mobileMenu && styles.navMobileActive}`}>
-              <Link to="/" className={styles.links}>INÍCIO</Link>
+              <Link to="/triunfo" className={styles.links} onClick={toHome}>INÍCIO</Link>
               
               {mobile && (
-                <Link to="mailto:mikebbatista@hotmail.com?subject=teste" className={styles.links}>ENTRE EM CONTATO</Link>
+                <Link to="mailto:contato@triunfogamestudios.com?subject=Contact to Triunfo Games" className={styles.links}>ENTRE EM CONTATO</Link>
               )}
               {!mobile && (
-              <Link to="mailto:mikebbatista@hotmail.com?subject=teste"><button className={styles.btn}>ENTRE EM CONTATO</button></Link>
+              <Link to="mailto:contato@triunfogamestudios.com?subject=Contact to Triunfo Games"><button className={styles.btn}>ENTRE EM CONTATO</button></Link>
               )}
             </div>
         </nav>
