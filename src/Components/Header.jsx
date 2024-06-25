@@ -40,7 +40,7 @@ const Header = () => {
     <div className={`${styles.active} ${show && styles.hidden}`}>
         <nav>
             <div className={styles.navDiv}>
-                <Link to="/triunfo" aria-label='Triunfo - Home' onClick={toHome}>
+                <Link to="/" aria-label='Triunfo - Home' onClick={toHome}>
                 <img className={styles.logo} src={logo} alt="" />
                 </Link>
             </div>
@@ -53,7 +53,7 @@ const Header = () => {
                 </button>
             )}
             <div className={`${mobile ? styles.navMobile : styles.navDiv} ${mobileMenu && styles.navMobileActive}`}>
-              <Link to="/triunfo" className={styles.links} onClick={toHome}>INÍCIO</Link>
+              <Link to="/" className={styles.links} onClick={toHome}>INÍCIO</Link>
               
               {mobile && (
                 <Link to="mailto:contato@triunfogamestudios.com?subject=Contact to Triunfo Games" className={styles.links}>ENTRE EM CONTATO</Link>
