@@ -2,7 +2,7 @@ body {
   margin: 0;
   color: #ffffff;
   background-color: #191919;
-  --type-first: 'Lexend';
+  --type-first: 'Futura Md BT';
   font-family: var(--type-first);
 }
 
