@@ -1,8 +1,10 @@
 import React from 'react'
 import styles from './Home.module.css'
 import main_image from '../assets/first_image.png'
+import main_image_mobile from '../assets/first_image_mobile.png'
 import led from '../assets/led.png'
 import { Link } from 'react-router-dom';
+import useMedia from '../Hooks/useMedia';
 import YoutubePlayer from "./YoutubePlayer";
 import Carousel from './Carousel'
 import youtubeIcon from '../assets/youtube-icon.svg'
@@ -10,8 +12,13 @@ import discIcon from '../assets/discord-icon.svg'
 import instaIcon from '../assets/insta-icon.svg'
 import linkedinIcon from '../assets/linkedin-icon.svg'
 import twitterIcon from '../assets/x.png'
+import footerImg from '../assets/footerImg.png'
 
 const Home = () => {
+
+  const mobile = useMedia('(max-width: 913px)');
+  console.log(mobile);
+
   return (
     <div className={styles.homeContainer}>
       <div className={styles.container}>
@@ -21,7 +28,7 @@ const Home = () => {
           </h1>
         </div>
         <div>
-          <img className={styles.mainImage} src={main_image} />
+          <img className={styles.mainImage} src={mobile ? main_image_mobile : main_image}/>
         </div>
       </div>
       <div className={styles.secondBlock}>
@@ -108,6 +115,9 @@ const Home = () => {
               <p>Linkedin</p>
             </Link>
           </div>
+      </div>
+      <div className={styles.lastImageDiv}>
+        <img className={styles.lastImage} src={footerImg} />
       </div>
     </div>
   )
