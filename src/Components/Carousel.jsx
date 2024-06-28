@@ -5,26 +5,10 @@ import 'slick-carousel/slick/slick-theme.css';
 import styles from './Carousel.module.css';
 import arrow_left from '../assets/arrow_left.png';
 import arrow_right from '../assets/arrow_right.png';
-import board1 from '../assets/Board01_01.jpg';
-import board2 from '../assets/Board01_02.png';
-import board3 from '../assets/Board01_03.png';
-import board4 from '../assets/Board01_04.png';
-import chest1 from '../assets/Chest01_01.jpg';
-import chest2 from '../assets/Chest01_02.png';
-import chest3 from '../assets/Chest01_03.png';
-import chest4 from '../assets/Chest01_04.png';
-import chest01 from '../assets/Chest02_01.jpg';
-import chest02 from '../assets/Chest02_02.png';
-import chest03 from '../assets/Chest02_03.png';
-import niv01 from '../assets/niv01.png';
-import niv02 from '../assets/niv02.png';
-import rig01 from '../assets/rig_01.png';
-import rig02 from '../assets/rig_02.png';
-import rig03 from '../assets/rig_03.png';
-import woodTable01 from '../assets/WoodTable_01.jpg'
-import woodTable02 from '../assets/WoodTable_02.png'
-import woodTable03 from '../assets/WoodTable_03.png'
-import woodTable04 from '../assets/WoodTable_04.png'
+import sina_1 from '../assets/carrousel/sina_1.png'
+import sina_2 from '../assets/carrousel/sina_2.png'
+import sina_3 from '../assets/carrousel/sina_3.png'
+import sina_4 from '../assets/carrousel/sina_4.png'
 
 
 
@@ -50,10 +34,7 @@ const Carousel = () => {
   };
 
   const renderSlides = () => {
-    return [board1, board2, board3, board4, 
-      chest1, chest2, chest3, chest4, chest01, 
-      chest02, chest03, niv01, niv02, rig01, 
-      rig02, rig03, woodTable01, woodTable02, woodTable03, woodTable04].map((image, index) => (
+    return [sina_1, sina_2, sina_3, sina_4].map((image, index) => (
       <div key={index}>
         <h3>
           <img

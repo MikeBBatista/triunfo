@@ -53,13 +53,13 @@ const Header = () => {
                 </button>
             )}
             <div className={`${mobile ? styles.navMobile : styles.navDiv} ${mobileMenu && styles.navMobileActive}`}>
-              <Link to="/" className={styles.links} onClick={toHome}>INÍCIO</Link>
+              <Link to="/" className={styles.links} onClick={toHome}>HOME</Link>
               
               {mobile && (
-                <Link to="mailto:contato@triunfogamestudios.com?subject=Contact to Triunfo Games" className={styles.links}>ENTRE EM CONTATO</Link>
+                <Link to="mailto:contato@triunfogamestudios.com?subject=Contact to Triunfo Games" className={styles.links}>GET IN TOUCH</Link>
               )}
               {!mobile && (
-              <Link to="mailto:contato@triunfogamestudios.com?subject=Contact to Triunfo Games"><button className={styles.btn}>ENTRE EM CONTATO</button></Link>
+              <Link to="mailto:contato@triunfogamestudios.com?subject=Contact to Triunfo Games"><button className={styles.btn}>GET IN TOUCH</button></Link>
               )}
             </div>
         </nav>

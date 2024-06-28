@@ -17,7 +17,6 @@ import footerImg from '../assets/footerImg.png'
 const Home = () => {
 
   const mobile = useMedia('(max-width: 913px)');
-  console.log(mobile);
 
   return (
     <div className={styles.homeContainer}>
