@@ -59,7 +59,7 @@ const EnHome = () => {
             a young person burdened with the responsibility of caring for their sick mother while searching for a cure.</p>
         <div className={styles.divVideoPlayer}>
           <div className={styles.videoPlayer}>
-            <YoutubePlayer embedId="mdwX3ac1sfo" />
+            <YoutubePlayer embedId="0S33I2n5gfI" />
           </div>          
           <div className={styles.divBtnOurProject}>
           <Link to="https://store.steampowered.com/app/2822310/Sina/" target="_blank">
