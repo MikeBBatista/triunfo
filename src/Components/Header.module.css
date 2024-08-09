@@ -35,6 +35,43 @@ nav {
     color: #ffffff;
 }
 
+.translateButton {
+    font-weight: bold;
+    border: none;
+    width: auto;
+    height: 40px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    appearance: none;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.translateButton:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+
+.translateButton::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+}
+
+.translateButton option {
+    text-align: center;
+    background-color: #1E1E1E;
+}
+
 .logo {
     height: 42px;
 }
@@ -75,6 +112,12 @@ nav {
     align-items: center;
     border-bottom: 1px solid #ffffff;
     margin-top: 8px;
+    padding: .5rem 0;
+}
+
+.navMobile select {
+    margin-top: 8px;
+    margin-right: 48px;
     padding: .5rem 0;
 }
 

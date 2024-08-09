@@ -13,17 +13,19 @@ import instaIcon from '../assets/insta-icon.svg'
 import linkedinIcon from '../assets/linkedin-icon.svg'
 import twitterIcon from '../assets/x.png'
 import footerImg from '../assets/footerImg.png'
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
 
   const mobile = useMedia('(max-width: 913px)');
+  const { t } = useTranslation();
 
   return (
     <div className={styles.homeContainer}>
       <div className={styles.container}>
         <div className={styles.introDiv}>
           <h1 className={styles.intro}>
-            ACREDITAMOS QUE OS <span className={styles.specialWorldRed}>VIDEOGAMES</span> PODEM SER OBRAS DE <span className={styles.specialWorldBlue}>ARTE</span> ATEMPORAIS.
+            {t('principal1')} <span className={styles.specialWorldRed}>{t('principal2')}</span>{t('principal3')}<span className={styles.specialWorldBlue}>{t('principal4')}</span> {t('principal5')}
           </h1>
         </div>
         <div>
@@ -33,53 +35,51 @@ const Home = () => {
       <div className={styles.secondBlock}>
         <div className={styles.aboutUs}>
           <div className={styles.aboutUsTitle}>
-          <h2>SOBRE NÓS</h2>
+          <h2>{t('aboutUs')}</h2>
           </div>
           <div className={styles.divImgAboutUs}>
           <img src={led} className={styles.aboutUsImg} />
           </div>
         </div>
         <p className={styles.secondBlockP}>
-          Nossa missão é desenvolver jogos que coloquem a arte no centro da experiência, combinando visuais deslumbrantes, 
-          narrativas envolventes e jogabilidade inovadora.
+          {t('aboutUsFirstP')}
         </p>
         <p className={styles.secondBlockP}>
-        Temos um canal no youtube chamado Familia dev onde postamos devlog videos sobre todo nosso processo de abertura, 
-        crescimento da empresa e desenvolvimento do SINA.
+          {t('aboutUsSecondP')}
         </p>
         <Link to="https://www.youtube.com/@familiadev/featured" target="_blank">
         <div className={styles.btnAboutUs}>
-          <button className={styles.btn}>CONHEÇA NOSSO CANAL</button>
+          <button className={styles.btn}>{t('checkOurChannel')}</button>
         </div>
         </Link>
       </div>
       <div className={styles.thirdBlock}>
-        <h2>NOSSO PROJETO</h2>
-        <p className={styles.secondBlockP}>Em nosso primeiro projeto, SINA, embarcamos em uma aventura épica ambientada em um universo abandonado pelos deuses. Os jogadores assumem o papel de Neeve, um jovem que carrega a responsabilidade de cuidar de sua mãe doente enquanto busca por uma cura.</p>
+        <h2>{t('project')}</h2>
+        <p className={styles.secondBlockP}>{t('projectP')}</p>
         <div className={styles.divVideoPlayer}>
           <div className={styles.videoPlayer}>
-            <YoutubePlayer embedId="mdwX3ac1sfo" />
+            <YoutubePlayer embedId="0S33I2n5gfI" />
           </div>          
           <div className={styles.divBtnOurProject}>
           <Link to="https://store.steampowered.com/app/2822310/Sina/" target="_blank">
-            <button className={styles.btn}>BAIXE O DEMO NA STEAM</button>
+            <button className={styles.btn}>{t('downloadButton')}</button>
           </Link>
           </div>
         </div>
       </div>
       <div className={styles.forthBlock}>
         <div className={styles.aboutUsTitle}>
-          <h2>SLIDE SHOW</h2>
+          <h2>{t('gallery')}</h2>
           </div>
       </div>
       <Carousel />
       <div className={styles.contact}>
         <div className={styles.contactContent}>
-          <h2>VAMOS CONVERSAR?</h2>
+          <h2>{t('letsTalk')}</h2>
         </div>
         <div className={styles.contatButton}>  
           <Link to="mailto:contato@triunfogamestudios.com?subject=Contact to Triunfo Games" >
-            <button className={styles.btn}>ENTRE EM CONTATO</button>
+            <button className={styles.btn}>{t('getInTouch')}</button>
           </Link>
         </div>
       </div>
