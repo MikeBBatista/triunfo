@@ -11,8 +11,14 @@
   "aboutUsSecondP": "We have a YouTube channel called \"Familia dev\" where we post devlog videos about our entire journey of starting up, growing the company, and developing SINA.",
   "checkOurChannel": "CHECK OUT OUR CHANNEL",
   "project": "PROJECT",
-  "projectP": "In our first project, SINA, we embark on an epic adventure set in a universe abandoned by the gods. Players take on the role of Neeve, a young person burdened with the responsibility of caring for their sick mother while searching for a cure.",
+  "projectP1": "SINA is an action-adventure game that blends breathtaking landscapes, precise combat, and a captivating story. It follows the journey of Neeve, a young man in a world forsaken by the gods, burdened with the responsibility of caring for his ailing mother.",
+  "projectP2": "In this mysterious and chaotic universe, little is known about its origins or why it has been overrun by chaos and grotesque monsters. Neeve sets out on a perilous quest to find a cure for his mother, all while uncovering the secrets of a fascinating world that has never been fully unraveled.",
   "gallery": "GALLERY",
   "downloadButton": "DOWNLOAD THE DEMO ON STEAM",
-  "letsTalk": "LET'S TALK?"
+  "letsTalk": "LET'S TALK?",
+  "aboutFirstParagraph": "Triunfo Game Studios was born from the friendship and passion for games shared by three friends: Thiago Balbino, Arion Cerceau, and João Pedro Borges. We met in college, and by the end of 2021, we made a bold decision: to take all the money we had, give up secure careers, and dedicate ourselves entirely to game creation. We decided to live together and launch a YouTube channel, 'Família Dev,' where we share our journey — from development challenges to moments of relaxation.",
+  "aboutSecondParagraph": "Our work soon began to attract attention, and thanks to the quality of our game and the support of the community, we managed to bring together a talented team that now has 14 people. We work tirelessly because we believe we can showcase our art and quality to everyone who loves video games.",
+  "aboutThirdParagraph": "Our mission is to develop games that put art at the center of the experience, combining stunning visuals, engaging narratives, and innovative gameplay.",
+  "aboutRoomParagraph": "With dedication and passion, we are expanding our presence in the national market while building a vibrant community that grows alongside us. Each new stage is driven by the support of our followers and the trust of those who believe in our work. We know we still have much to achieve, and that motivates us to keep moving forward, innovating, and dreaming big. And this is just the first phase of our story.",
+  "more": "LEARN MORE..."
 }

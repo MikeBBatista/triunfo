@@ -1,11 +1,11 @@
 .carouselDiv {
-    max-height: 607px;
+    max-height: 600px;
     margin-right: 100px;
     width: 100%;
 }
 
 .carouselImg {
-    height: 607px;
+    max-height: 600px;
     width: 95%;
     object-fit: contain;
     transition: .3s ease-in-out;
@@ -25,6 +25,12 @@
     position: absolute;
     top: 275px;
     cursor: pointer;
+    opacity: .7;
+    transition: opacity 0.3s ease;
+}
+
+.custom-arrow:hover {
+    opacity: 1;
 }
 
 @media only screen and (max-width: 913px) {
