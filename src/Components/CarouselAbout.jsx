@@ -10,6 +10,8 @@ import imagem_2 from '../assets/carrousel/Frame2.png'
 import imagem_3 from '../assets/carrousel/Frame3.png'
 import imagem_4 from '../assets/carrousel/Frame5.png'
 import imagem_5 from '../assets/carrousel/Frame6.png'
+import imagem_6 from '../assets/carrousel/Frame7.png'
+import imagem_7 from '../assets/carrousel/Frame8.png'
 
 const customArrowClass = 'custom-arrow';
 
@@ -33,7 +35,7 @@ const CarouselAbout = () => {
     };
 
     const renderSlides = () => {
-        return [imagem_1, imagem_2, imagem_3, imagem_4, imagem_5].map((image, index) => (
+        return [imagem_1, imagem_2, imagem_3, imagem_4, imagem_5, imagem_6, imagem_7].map((image, index) => (
             <div key={index}>
                     <img
                         src={image}
