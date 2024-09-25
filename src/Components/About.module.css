@@ -77,6 +77,17 @@
 
 }
 
+.adjustMailParagraph{
+    margin-top: 0px;
+    margin-bottom: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .selfie {
     width: 130px;
 }

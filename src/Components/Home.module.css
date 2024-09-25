@@ -65,6 +65,16 @@
     justify-content: center;
 }
 
+.adjustMailParagraph{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .secondBlockP:first-child {
     margin-top: 70px;
 }
@@ -173,7 +183,7 @@
 }
 
 .socialMedia {
-    margin-top: 100px;
+    margin-top: 50px;
     height: 128px;
     width: 100%;
     display: flex;

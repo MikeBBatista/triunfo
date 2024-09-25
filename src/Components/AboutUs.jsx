@@ -92,6 +92,11 @@ function AboutUs() {
                     </div>
                 </Link>
             </div>
+            <div className={styles.adjustMailParagraph}>
+				<div className={styles.aboutUs}>
+					<p>contato@triunfogamestudios.com</p>
+				</div>
+			</div>
             <div className={styles.socialMedia}>
                 {/* <div className={styles.socialMediaFirstItem}>
                     <Link to='https://www.youtube.com/@familiadev/featured' target="_blank">
