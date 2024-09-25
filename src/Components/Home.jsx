@@ -46,7 +46,7 @@ const Home = () => {
 						{t('aboutUsFirstP') + ' ' + t('aboutUsSecondP')}
 					</p>
 				</div>
-				<Link to="/aboutUs" target="_blank">
+				<Link to="/aboutUs">
 					<div className={styles.btnAboutUs}>
 						<button className={styles.btn}>{t('more')}</button>
 					</div>
