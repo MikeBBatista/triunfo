@@ -86,7 +86,7 @@ function AboutUs() {
             </div>
             <div className={styles.bannerContainer}>
                 <img className={styles.bannerFamiliaDev} src={familiaDev} alt="" />
-                <Link to="/aboutUs" target="_blank">
+                <Link to="https://www.youtube.com/@familiadev/featured" target="_blank">
                     <div className={styles.btnAboutUs}>
                         <button className={styles.btn}>{t('checkOurChannel')}</button>
                     </div>
