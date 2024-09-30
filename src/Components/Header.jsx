@@ -62,25 +62,36 @@ const Header = () => {
                     </button>
                 )}
                 <div className={`${mobile ? styles.navMobile : styles.navDiv} ${mobileMenu && styles.navMobileActive}`}>
-    
+
                     <Link to="/" className={styles.links} onClick={toStarterPage}>{t('home')}</Link>
 
                     <Link to="/aboutUs" className={styles.links} onClick={toStarterPage} >{t('aboutUs')}</Link>
 
-                    <Link className={styles.links}>
-                        <select
-                            className={styles.translateButton}
-                            onChange={(e) => changeLanguage(e.target.value)}>
-                            <option value="en">EN-US</option>
-                            <option value="pt">PT-BR</option>
-                        </select>
-                    </Link>
-
                     {mobile && (
-                        <Link to="mailto:contato@triunfogamestudios.com?subject=Contact to Triunfo Games" className={styles.links}>{t('getInTouch')}</Link>
+                        <>
+                            <Link to="mailto:contato@triunfogamestudios.com?subject=Contact to Triunfo Games" className={styles.links}>{t('getInTouch')}</Link>
+                            <Link className={styles.links}>
+                                <select
+                                    className={styles.translateButton}
+                                    onChange={(e) => changeLanguage(e.target.value)}>
+                                    <option value="en">EN-US</option>
+                                    <option value="pt">PT-BR</option>
+                                </select>
+                            </Link>
+                        </>
                     )}
                     {!mobile && (
-                        <Link to="mailto:contato@triunfogamestudios.com?subject=Contact to Triunfo Games"><button className={styles.btn}>{t('getInTouch')}</button></Link>
+                        <>
+                            <Link className={styles.links}>
+                                <select
+                                    className={styles.translateButton}
+                                    onChange={(e) => changeLanguage(e.target.value)}>
+                                    <option value="en">EN-US</option>
+                                    <option value="pt">PT-BR</option>
+                                </select>
+                            </Link>
+                            <Link to="mailto:contato@triunfogamestudios.com?subject=Contact to Triunfo Games"><button className={styles.btn}>{t('getInTouch')}</button></Link>
+                        </>
                     )}
                 </div>
             </nav>

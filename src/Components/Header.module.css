@@ -86,7 +86,7 @@ nav {
     flex-direction: column;
     position: fixed;
     top: 70px;
-    height: 164px;
+    height: 240px;
     width: 100%;
     left: 0px;
     padding: 0 1rem;
@@ -99,7 +99,7 @@ nav {
 }
 
 .navMobileActive {
-    transition: .3s;
+    transition: .5s;
     transform: initial;
     pointer-events: initial;
     opacity: 1;

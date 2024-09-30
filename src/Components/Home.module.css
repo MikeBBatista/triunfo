@@ -2,6 +2,7 @@
     height: auto;
     display: block;
 }
+
 .mainImage {
     margin-left: 15vw;
     width: 84.8%
@@ -15,12 +16,13 @@
 
 .introDiv {
     flex: 1;
-    position: absolute;
+    position: relative;
 }
 
 .intro {
-    padding-left: 200px;
-    padding-top: 220px;
+    position: absolute;
+    left: 13%;
+    top: 220px;
     width: 588px;
 }
 
@@ -34,8 +36,8 @@
 
 .secondBlock {
     margin-top: 162px;
-    margin-left: 122px;
-    margin-right: 122px;
+    padding-left: 122px;
+    max-width: 100%;
 }
 
 .aboutUsTitle {
@@ -44,19 +46,34 @@
 
 .divImgAboutUs {
     max-width: 800px;
+}
 
+.aboutUsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutUs {
+    width: 70%;
+    min-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    text-align: justify;
 }
 
 .aboutUsImg {
-    margin-top: -160px;
-    margin-left: 100px;
-    position: absolute;
-    right: 0;
-    width: auto;
-    z-index: -1;
+    max-width: 100%;
+    width: 60vw;
+    margin-top: -50px;
 }
 
-.adjustParagraph{
+.adjustParagraph {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -65,7 +82,7 @@
     justify-content: center;
 }
 
-.adjustMailParagraph{
+.adjustMailParagraph {
     margin-top: 40px;
     width: 100%;
     display: flex;
@@ -81,14 +98,13 @@
 
 .secondBlockP {
     text-align: justify;
-    max-width: 84%;
+    max-width: 85%;
     margin-bottom: 30px;
 }
 
 .thirdBlock {
     margin-top: 100px;
-    margin-left: 122px;
-    margin-right: 122px;
+    padding-left: 122px;
     margin-bottom: 48px;
 }
 
@@ -106,7 +122,7 @@
 }
 
 .divBtnOurProject {
-    width: 80%  ;
+    width: 80%;
     height: 64px;
     padding-top: 100px;
     align-self: center;
@@ -127,10 +143,8 @@
 
 .btn::before {
     content: "";
-    background: linear-gradient(
-        45deg,
-        #FF206E, #41EAd4
-    );
+    background: linear-gradient(45deg,
+            #FF206E, #41EAd4);
     position: absolute;
     margin-top: -20px;
     left: 0;
@@ -144,7 +158,8 @@
     opacity: 0;
 }
 
-.btn:hover::before, .btnOurProject:hover::before {
+.btn:hover::before,
+.btnOurProject:hover::before {
     opacity: 1;
 }
 
@@ -152,10 +167,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;    
+    width: 100%;
 }
 
-.videoPlayer{
+.videoPlayer {
     width: 80%;
     align-self: center;
 }
@@ -183,34 +198,51 @@
 }
 
 .socialMedia {
-    margin-top: 50px;
+    padding-top: 20px;
     height: 128px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0px;
     background-size: cover;
     background-position: center;
 }
 
+.socialMediaLink {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding-left: 20%;
+}
+
 .socialMediaFirstItem {
     border-radius: 16px 0px 0px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .socialMediaLastItem {
     border-radius: 0px 16px 16px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.socialMediaItem,  .socialMediaFirstItem, .socialMediaLastItem {
+.socialMediaItem,
+.socialMediaFirstItem,
+.socialMediaLastItem {
     height: 128px;
     outline: 1px solid #666666;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: #1E1E1E;
     width: 220px;
-    padding-left: 20px;
 }
 
 .socialMediaIcons {
@@ -219,7 +251,8 @@
     margin-bottom: 20px;
 }
 
-.lastImageDiv{
+
+.lastImageDiv {
     width: 100%;
     z-index: -100;
 }
@@ -231,64 +264,111 @@
     z-index: -100;
 }
 
-@media only screen and (max-width: 913px) {
-    .container {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .introDiv {
-        width: 60%;
-        margin-bottom: -64px;
-        position: relative;
-    }
-
+@media only screen and (max-width: 1365px) {
     .intro {
-        position: relative;
-        max-width: 1100px;
-        padding-left: 0;
-        text-align: left;
-        padding-left: 24px;
-        width: auto;
-        min-width: calc(100% - 24px);
-        padding-top: 98px;
-        height: auto;
+        left: 10%;
+        font-size: 4vw;
+        width: 40vw;
     }
-    .mainImage {
-        width: 100%;
-        height: 100%;
-        margin-top: -50px;
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    .aboutUs {
+        min-width: auto;
+    }
+
+    .socialMedia {
+        padding-top: 20px;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .socialMediaItem,
+    .socialMediaFirstItem,
+    .socialMediaLastItem {
+        width: 20%;
+    }
+
+    .secondBlock,
+    .thirdBlock,
+    .forthBlock {
+        padding-left: 80px;
+    }
+
+    .secondBlock {
+        margin-top: 80px;
+    }
+
+    .forthBlock {
+        margin-top: 120px;
         margin-left: 0;
-    }
-
-    .secondBlock, .thirdBlock, .forthBlock {
-        margin-left: 24px;
-        margin-right: 24px;
-        margin-top: 70px;
-    }
-
-    .aboutUsImg {
-        margin-top: -140px;
-        margin-left: 100px;
+        margin-right: 0;
     }
 
     .contact {
         margin-top: 50px;
-        height: 258px;
+    }
+}
+
+@media only screen and (max-width: 913px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+    }
+
+    .introDiv {
+        position: static;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .intro {
+        text-align: center;
+        position: static;
+        text-align: left;
+        width: 70%;
+    }
+
+    .aboutUsImg {
+        margin-top: -30px;
+    }
+
+    .mainImage {
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+    }
+
+    .secondBlock,
+    .thirdBlock,
+    .forthBlock {
+        padding-left: 50px;
+        margin-top: 70px;
+        margin-right: 0;
+    }
+
+    .contact {
+        margin-top: 50px;
+        height: 220px;
         display: flex;
         align-items: center;
         flex-direction: column;
     }
-    
+
     .contactContent {
         margin-left: 0px;
         margin-bottom: 38px;
-        width: 326px;
+        width: 400px;
         text-align: center;
         margin-top: 38px;
     }
-    
+
     .contatButton {
         margin-left: 50%;
         margin-right: 50%;
@@ -297,26 +377,25 @@
         margin-bottom: 38px;
     }
 
+
     .socialMedia {
         flex-direction: column;
-        margin-top: 200px;
-        height: 500px;
+        height: 620px;
         width: 100%;
         display: flex;
-        gap: 0px;
-        background-image: none;
     }
 
     .socialMediaFirstItem {
         border-radius: 16px 16px 0px 0px;
     }
-    
+
     .socialMediaLastItem {
         border-radius: 0px 0px 16px 16px;
     }
-    
-    .socialMediaItem,  .socialMediaFirstItem, .socialMediaLastItem {
-        height: 128px;
+
+    .socialMediaItem,
+    .socialMediaFirstItem,
+    .socialMediaLastItem {
         outline: 1px solid #666666;
         display: flex;
         flex-direction: column;
@@ -325,11 +404,24 @@
         width: 60%;
         padding: 20px 20px 20px 20px;
     }
-    
+
     .socialMediaIcons {
         height: 32px;
         width: 32px;
         margin-bottom: 20px;
+    }
+
+    .socialMediaLink {
+        padding-left: 0;
+        align-items: center;
+        width: auto;
+    }
+
+    .socialMedia a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .btnAboutUs {
@@ -342,7 +434,7 @@
     }
 
     .divBtnOurProject {
-      padding-top: 46px;  
+        padding-top: 46px;
     }
 
     .lastImage {
@@ -351,21 +443,29 @@
 }
 
 @media only screen and (max-width: 750px) {
-    .container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: left;
-      }
-  
-    .introDiv {
-        width: 100%;
-        margin-bottom: 0;
+    .aboutUsImg {
+        margin-top: 0px;
+        width: 280px;
     }
 
-    .aboutUsImg {
-        margin-top: -120px;
-        margin-left: 100px;
-        width: 30%;
-        height: 20%;
+    .aboutUsTitle{
+        width: 240px;
+        min-width: auto;
+    }
+
+    h2{
+        font-size: 24px;
+    }
+
+    .secondBlock{
+        margin-top: 30px;
+    }
+
+    .secondBlockP{
+        font-size: 18px;
+    }
+
+    .secondBlockP:first-child{
+        margin-top: 20px;
     }
 }

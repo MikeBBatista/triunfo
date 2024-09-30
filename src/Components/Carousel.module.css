@@ -15,7 +15,7 @@
     left: 122px;
     z-index: 1;
 }
-  
+
 .custom-arrow-next {
     right: 122px;
     z-index: 1;
@@ -33,13 +33,19 @@
     opacity: 1;
 }
 
+@media only screen and (max-width: 1368px) {
+    .custom-arrow {
+        top: 170px;
+    }
+}
+
 @media only screen and (max-width: 913px) {
     .custom-arrow-prev {
         left: 24px;
         z-index: 1;
         height: 48px;
     }
-      
+
     .custom-arrow-next {
         right: 24px;
         z-index: 1;
@@ -56,11 +62,15 @@
 }
 
 @media only screen and (max-width: 750px) {
+    .carouselDiv {
+        max-height: 600px;
+    }
+
     .carouselImg {
-        height: 200px;
+        height: 300px;
     }
 
     .custom-arrow {
-        top: 75px;
+        top: 125px;
     }
 }

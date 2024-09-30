@@ -33,7 +33,7 @@ const Home = () => {
 				</div>
 			</div>
 			<div className={styles.secondBlock}>
-				<div className={styles.aboutUs}>
+				<div className={styles.aboutUsContainer}>
 					<div className={styles.aboutUsTitle}>
 						<h2>{t('aboutUs')}</h2>
 					</div>

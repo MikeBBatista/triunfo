@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './About.module.css'
 import main_image from '../assets/Borda_Cima.png'
-import main_image_mobile from '../assets/first_image_mobile.png'
 import led from '../assets/led.png'
 import thiago from '../assets/Thiago.png'
 import johnjohn from '../assets/John_John.png'
@@ -51,20 +50,6 @@ function AboutUs() {
                     <p className={styles.aboutUsP}>{t('aboutRoomParagraph')}</p>
                 </div>
             </div>
-            {/* <div className={styles.thirdBlock}>
-				<h2>{t('project')}</h2>
-				<p className={styles.secondBlockP}>{t('projectP')}</p>
-				<div className={styles.divVideoPlayer}>
-					<div className={styles.videoPlayer}>
-						<YoutubePlayer embedId="0S33I2n5gfI" />
-					</div>
-					<div className={styles.divBtnOurProject}>
-						<Link to="https://store.steampowered.com/app/2822310/Sina/" target="_blank">
-							<button className={styles.btn}>{t('downloadButton')}</button>
-						</Link>
-					</div>
-				</div>
-			</div> */}
             <div className={styles.forthBlock}>
                 <div className={styles.aboutUsTitle}>
                     <h2>{t('gallery')}</h2>
@@ -98,12 +83,6 @@ function AboutUs() {
 				</div>
 			</div>
             <div className={styles.socialMedia}>
-                {/* <div className={styles.socialMediaFirstItem}>
-                    <Link to='https://www.youtube.com/@familiadev/featured' target="_blank">
-                        <img className={styles.socialMediaIcons} src={youtubeIcon} />
-                        <p>Youtube</p>
-                    </Link>
-                </div> */}
                 <div className={styles.socialMediaFirstItem}>
                     <Link className={styles.socialMediaLink} to='https://discord.gg/r9SaNZGBrX' target="_blank">
                         <img className={styles.socialMediaIcons} src={discIcon} />

@@ -77,7 +77,7 @@
 
 }
 
-.adjustMailParagraph{
+.adjustMailParagraph {
     margin-top: 0px;
     margin-bottom: 25px;
     width: 100%;
@@ -110,7 +110,7 @@
     gap: 30px;
 }
 
-.aboutUsP{
+.aboutUsP {
     width: 86.8%;
 }
 
@@ -246,7 +246,7 @@
     background-position: center;
 }
 
-.socialMediaLink{
+.socialMediaLink {
     width: 100%;
     height: 100%;
     display: flex;
@@ -301,29 +301,61 @@
     z-index: -100;
 }
 
+@media only screen and (max-width: 1280px) {
+    .aboutUs {
+        min-width: 100%;
+    }
+
+
+    .textSelfies * {
+        font-size: 1.5rem;
+    }
+
+    .aboutUsP {
+        font-size: 1.5rem;
+    }
+
+    .socialMediaItem,
+    .socialMediaFirstItem,
+    .socialMediaLastItem {
+        width: 20%;
+    }
+}
+
 @media only screen and (max-width: 913px) {
     .container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    .introDiv {
-        width: 60%;
-        margin-bottom: -64px;
-        position: relative;
+        padding-top: 124px;
     }
 
     .intro {
-        position: relative;
-        max-width: 1100px;
-        padding-left: 0;
-        text-align: left;
-        padding-left: 24px;
-        width: auto;
-        min-width: calc(100% - 24px);
-        padding-top: 98px;
-        height: auto;
+        padding-top: 0;
+        font-size: 2.5rem;
+    }
+
+    .introDiv {
+        left: 0;
+        top: 40px;
+    }
+
+    .bannerFamiliaDev {
+        width: 75%;
+    }
+
+    .divImgAboutUs {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+
+    .contentContainer {
+        width: 100%;
+    }
+
+    .selfie {
+        width: 100%;
     }
 
     .mainImage {
@@ -333,22 +365,42 @@
         margin-left: 0;
     }
 
-    .secondBlock,
-    .thirdBlock,
-    .forthBlock {
+    .thirdBlock {
         margin-left: 24px;
         margin-right: 24px;
         margin-top: 70px;
     }
 
+    .forthBlock {
+        margin-top: 70px;
+    }
+
+    .secondBlock {
+        margin-top: 70px;
+        margin-bottom: 10%;
+    }
+
+    .aboutUs {
+        min-width: auto;
+        width: 90%;
+    }
+
     .aboutUsImg {
-        margin-top: -140px;
-        margin-left: 100px;
+        width: 90%;
+    }
+
+    .textSelfies * {
+        font-size: 1.3rem;
+    }
+
+    .aboutUsP {
+        font-size: 1.3rem;
+        width: 100%;
     }
 
     .contact {
         margin-top: 50px;
-        height: 258px;
+        height: 200px;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -357,7 +409,7 @@
     .contactContent {
         margin-left: 0px;
         margin-bottom: 38px;
-        width: 326px;
+        width: 350px;
         text-align: center;
         margin-top: 38px;
     }
@@ -403,6 +455,12 @@
         margin-bottom: 20px;
     }
 
+    .socialMediaLink {
+        padding-left: 0;
+        align-items: center;
+        width: auto;
+    }
+
     .btnAboutUs {
         height: 64px;
         width: 291px;
@@ -433,10 +491,52 @@
         margin-bottom: 0;
     }
 
-    .aboutUsImg {
-        margin-top: -120px;
-        margin-left: 100px;
-        width: 30%;
-        height: 20%;
+    .textSelfies * {
+        font-size: 1.2rem;
+    }
+
+    .aboutUsP {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .contentContainer {
+        flex-direction: column;
+    }
+
+    .selfieContainer {
+        flex-direction: row;
+    }
+
+    .selfieContainer {
+        width: 20%;
+    }
+
+    .contentContainer {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .aboutUs {
+        width: 100%;
+
+    }
+
+    .aboutUsP {
+        width: 80%;
+    }
+
+    .secondBlock {
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .aboutUsTitle {
+        min-width: auto;
+    }
+
+    .aboutUs p {
+        font-size: 1.1rem;
     }
 }
