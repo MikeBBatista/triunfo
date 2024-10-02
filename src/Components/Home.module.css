@@ -469,4 +469,16 @@
     .secondBlockP:first-child{
         margin-top: 20px;
     }
+
+    .btnAboutUs{
+        margin: 0;
+    }
+
+    .aboutUs p{
+        font-size: 12px;
+    }
+
+    .contactContent{
+        width: auto;
+    }
 }

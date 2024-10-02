@@ -37,13 +37,11 @@ const Carousel = () => {
 
     const renderSlides = () => {
         return [imagem_1, imagem_2, imagem_3, imagem_4, imagem_5, imagem_6, imagem_7, imagem_8].map((image, index) => (
-            <div key={index}>
-                <h3>
-                    <img
-                        src={image}
-                        className={`${styles.carouselImg} ${focusedSlide === index ? styles.hoverable : ''}`}
-                    />
-                </h3>
+            <div key={index} style={"width: 20px"}>
+                <img
+                    src={image}
+                    className={`${styles.carouselImg} ${focusedSlide === index ? styles.hoverable : ''}`}
+                />
             </div>
         ));
     };

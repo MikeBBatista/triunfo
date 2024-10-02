@@ -62,15 +62,15 @@
 }
 
 @media only screen and (max-width: 750px) {
-    .carouselDiv {
-        max-height: 600px;
-    }
-
     .carouselImg {
         height: 300px;
     }
 
     .custom-arrow {
         top: 125px;
+    }
+
+    .carouselDiv{
+        margin: 0;
     }
 }
