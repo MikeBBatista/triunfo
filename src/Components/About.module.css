@@ -403,23 +403,18 @@
         height: 200px;
         display: flex;
         align-items: center;
-        flex-direction: column;
+        justify-content: space-around;
     }
 
     .contactContent {
         margin-left: 0px;
-        margin-bottom: 38px;
-        width: 350px;
+        width: auto;
         text-align: center;
-        margin-top: 38px;
     }
 
     .contatButton {
-        margin-left: 50%;
-        margin-right: 50%;
-        width: 326px;
-        height: 64px;
-        margin-bottom: 38px;
+        width: 35%;
+        margin: 0;
     }
 
     .socialMedia {
@@ -498,9 +493,22 @@
     .aboutUsP {
         font-size: 1.2rem;
     }
+
+    .contactContent h2{
+        font-size: 7vw;
+    }
 }
 
 @media only screen and (max-width: 590px) {
+    .mainImage{
+        height: 120px;
+        object-fit: cover;
+    }
+
+    .intro{
+        font-size: 2rem;
+    }
+    
     .contentContainer {
         flex-direction: column;
     }
@@ -538,5 +546,9 @@
 
     .aboutUs p {
         font-size: 1.1rem;
+    }
+
+    .lastImage{
+        margin-top: -50px;
     }
 }
