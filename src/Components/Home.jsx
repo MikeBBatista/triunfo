@@ -88,6 +88,7 @@ const Home = () => {
 			<div className={styles.adjustMailParagraph}>
 				<div className={styles.aboutUs}>
 					<p>contato@triunfogamestudios.com</p>
+					<p>WhatsApp: +55 031 99280-2022</p>
 				</div>
 			</div>
 			<div className={styles.socialMedia}>
