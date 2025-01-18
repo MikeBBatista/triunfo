@@ -60,7 +60,7 @@ const Home = () => {
 				</div>
 				<div className={styles.divVideoPlayer}>
 					<div className={styles.videoPlayer}>
-						<YoutubePlayer embedId="yYrPKP8h-VA?si=hlxgkC7s7QzZFRmf" />
+						<YoutubePlayer embedId="z1rEiw9KGHI?si=QYUtfAG6zgLnp5ay" />
 					</div>
 					<div className={styles.divBtnOurProject}>
 						<Link to="https://store.steampowered.com/app/2822310/Sina/" target="_blank">
