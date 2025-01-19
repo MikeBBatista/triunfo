@@ -5,14 +5,16 @@ import 'slick-carousel/slick/slick-theme.css'
 import styles from './Carousel.module.css'
 import arrow_left from '../assets/arrow_left.png'
 import arrow_right from '../assets/arrow_right.png'
-import imagem_1 from '../assets/carrousel/imagem_1.png'
-import imagem_2 from '../assets/carrousel/imagem_2.png'
-import imagem_3 from '../assets/carrousel/imagem_3.png'
-import imagem_4 from '../assets/carrousel/imagem_4.png'
-import imagem_5 from '../assets/carrousel/imagem_5.png'
-import imagem_6 from '../assets/carrousel/imagem_6.png'
-import imagem_7 from '../assets/carrousel/imagem_7.png'
-import imagem_8 from '../assets/carrousel/imagem_8.png'
+import imagem_1 from '../assets/carrousel/Gif_NPC.gif'
+import imagem_2 from '../assets/carrousel/Gif_GateCloseIn.gif'
+import imagem_3 from '../assets/carrousel/S_Bridge_1.png'
+import imagem_4 from '../assets/carrousel/S_Forest_3.png'
+import imagem_5 from '../assets/carrousel/S_Forest_5.png'
+import imagem_6 from '../assets/carrousel/S_Gateenemies.png'
+import imagem_7 from '../assets/carrousel/S_House_3.png'
+import imagem_8 from '../assets/carrousel/S_House_4.png'
+import imagem_9 from '../assets/carrousel/S_NPCTalk.png'
+import imagem_10 from '../assets/carrousel/S_Village_2.png'
 
 const customArrowClass = 'custom-arrow';
 
@@ -36,7 +38,7 @@ const Carousel = () => {
     };
 
     const renderSlides = () => {
-        return [imagem_1, imagem_2, imagem_3, imagem_4, imagem_5, imagem_6, imagem_7, imagem_8].map((image, index) => (
+        return [imagem_1, imagem_2, imagem_3, imagem_4, imagem_5, imagem_6, imagem_7, imagem_8, imagem_9, imagem_10].map((image, index) => (
             <div key={index} style={"width: 20px"}>
                 <img
                     src={image}
